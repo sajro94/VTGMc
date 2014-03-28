@@ -194,8 +194,8 @@ namespace WpfApplication3
             else if (File.Exists(@"C:\Program Files (x86)\java\jre7\bin\" + javaType + ".exe"))
             {
                 javaPath = @"C:\Program Files (x86)\java\jre7\bin\" + javaType + ".exe";
-                ram_amount = "512";
-                System.Windows.MessageBox.Show("Ram has been set to 512M because you are using a 32-bit version of java\nPlease try and install the 64-bit version");
+                ram_amount = "1024";
+                System.Windows.MessageBox.Show("Ram has been set to 1024M because you are using a 32-bit version of java\nPlease try and install the 64-bit version");
             }
             else
             {
