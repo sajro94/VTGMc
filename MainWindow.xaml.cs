@@ -272,7 +272,7 @@ namespace WpfApplication3
         private String GetJavaInstallationPath()
         {
             String javaKey = "SOFTWARE\\JavaSoft\\Java Runtime Environment";
-            using (var baseKey = RegistryKey.OpenBaseKey(RegistryHive.LocalMachine, RegistryView.Registry64).OpenSubKey(javaKey))
+            using (var baseKey = RegistryKey.OpenBaseKey(RegistryHive.LocalMachine, RegistryView.Default).OpenSubKey(javaKey))
             {
                 using (var homeKey = baseKey.OpenSubKey("1.7"))
                     return homeKey.GetValue("JavaHome").ToString();
