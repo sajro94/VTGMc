@@ -1,24 +1,12 @@
 ﻿using System;
 using System.IO;
 using Microsoft.Win32;
-using Microsoft.VisualBasic;
-using System.Collections.Generic;
-using System.Linq;
 using System.Net;
 using System.ComponentModel;
-using System.Text;
 using System.Threading.Tasks;
 using System.IO.Compression;
 using System.Windows;
 using System.Windows.Forms;
-using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
 using System.Diagnostics;
 
 namespace WpfApplication3
@@ -48,10 +36,6 @@ namespace WpfApplication3
                     {
                         this.Close();
                     }
-                    else
-                    {
-                        Properties.Settings.Default.installed = "installed";
-                    }
                 }
             }
             ulong max_ram = new Microsoft.VisualBasic.Devices.ComputerInfo().TotalPhysicalMemory;
@@ -78,6 +62,7 @@ namespace WpfApplication3
         }
         private async Task process()
         {
+            Properties.Settings.Default.installed = "installed";
                 string sessionId;
                 string user = username.Text;
                 string pass = password.Password;
